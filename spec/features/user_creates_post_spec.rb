@@ -11,6 +11,7 @@ RSpec.describe 'Creating post' do
 
     expect(page).to have_content 'My first story'
   end
+  
   scenario 'unsuccessfully' do
     visit root_path
     click_on 'Write a story'
