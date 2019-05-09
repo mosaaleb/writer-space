@@ -1,1 +1,8 @@
-Welcome to WriterSpace
+<h2>Welcome to WriterSpace</h2>
+<ul>
+<% @stories.each do |story| %>
+    <li>
+        <%= story.title%>
+    </li>
+<% end %>
+</ul>
