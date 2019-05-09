@@ -11,12 +11,11 @@ RSpec.feature 'User sign in' do
   scenario 'successfully' do
     sign_in @user
     
-
     expect(page).to have_content 'Signed in successfully'
   end
 
   scenario 'unsuccessfully' do
-    sign_in_as @user.email, 'gogogogo'
+    sign_in_as(@user.email, 'weak password')
 
     expect(page).not_to have_content 'Signed in successfully'
   end
