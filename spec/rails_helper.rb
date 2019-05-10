@@ -78,6 +78,7 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  config.include FactoryBot::Syntax::Methods
 
   config.include Features, type: :feature
   # RSpec Rails can automatically mix in different behaviours to your tests

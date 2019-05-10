@@ -3,9 +3,7 @@ require 'rails_helper'
 RSpec.feature 'User sign in' do
   
   background do
-    @user = User.create(email: 'person@example.com',
-                        password: 'password',
-                        password_confirmation: 'password')
+    @user = create(:user)
   end
   
   scenario 'successfully' do
@@ -15,7 +13,7 @@ RSpec.feature 'User sign in' do
   end
 
   scenario 'unsuccessfully' do
-    sign_in_as(@user.email, 'weak password')
+    sign_in_as(@user.email, 'wrong password')
 
     expect(page).not_to have_content 'Signed in successfully'
   end
