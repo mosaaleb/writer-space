@@ -1,11 +1,11 @@
-<header class="container-fluid">
+<header>
   <nav class="navbar navbar-default">
     <a class="navbar-brand" href="#">WriterSpace</a>
     <ul class="nav navbar-nav navbar-right">
       <li><%= link_to 'Write a story', new_story_path %></li>
-      <% if user_signed_in? %>
+      <!--<% if user_signed_in? %>
         <li>Welcome <%= current_user.username %></li>
-      <% end %>
+      <% end %>-->
     </ul>
   </nav>
 </header>
